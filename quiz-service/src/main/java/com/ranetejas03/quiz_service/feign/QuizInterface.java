@@ -16,7 +16,7 @@ import com.ranetejas03.quiz_service.dto.ResponseDTO;
 public interface QuizInterface {	
 	
 	@GetMapping("/questions/generate")
-	public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String category, @RequestParam int numOfQuestions);		//Integer
+	public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String categoryName, @RequestParam int numOfQuestions);		//Integer
 	
 	@PostMapping("/questions/getQuestions")
 	public ResponseEntity<List<QuestionDTO>> getQuestionsFromId(@RequestBody List<Integer> questionIds);
